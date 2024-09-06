@@ -3,6 +3,8 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import Layout from './components/Layout'
+import Header from './components/Header'
+import List from './components/List'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -10,7 +12,8 @@ function App() {
   return (
     <>
       <Layout>
-        <h2 className='justify-center flex'>jaber</h2>
+        <Header />
+        <List/>
       </Layout>
     </>
   )
