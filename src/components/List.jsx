@@ -14,6 +14,10 @@ function List() {
                     <td className='text-center border border-orange-400'>Go to work at 7:00</td>
                     <td className='flex justify-around pt-3 text-lg'><BsTrash3Fill className="cursor-pointer" color="red" /><BsCalendarCheckFill className="cursor-pointer" color="green" /></td>
                 </tr>
+                <tr className='border border-orange-400 h-10'>
+                    <td className='text-center border border-orange-400'>Go to work at 7:00</td>
+                    <td className='flex justify-around pt-3 text-lg'><BsTrash3Fill className="cursor-pointer" color="red" /><BsCalendarCheckFill className="cursor-pointer" color="green" /></td>
+                </tr>
             </table>
         </div>
 
