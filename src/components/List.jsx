@@ -1,8 +1,10 @@
 
-import { BsCalendarCheckFill,BsTrash3Fill  } from "react-icons/bs";
-import React from 'react'
 
-function List() {
+import React from 'react'
+import ListItem from "./ListItem";
+
+function List({doneHandler,delHandler}) {
+
     return (
         <div className='py-5 '>
             <table className='w-full border'>
@@ -10,14 +12,7 @@ function List() {
                     <th className='w-10/12 border border-orange-400'>To Do</th>
                     <th className='w-2/12'>OP</th>
                 </tr>
-                <tr className='border border-orange-400 h-10'>
-                    <td className='text-center border border-orange-400'>Go to work at 7:00</td>
-                    <td className='flex justify-around pt-3 text-lg'><BsTrash3Fill className="cursor-pointer" color="red" /><BsCalendarCheckFill className="cursor-pointer" color="green" /></td>
-                </tr>
-                <tr className='border border-orange-400 h-10'>
-                    <td className='text-center border border-orange-400'>Go to work at 7:00</td>
-                    <td className='flex justify-around pt-3 text-lg'><BsTrash3Fill className="cursor-pointer" color="red" /><BsCalendarCheckFill className="cursor-pointer" color="green" /></td>
-                </tr>
+                <ListItem title='Go to the Gym at 21:00' delHandler={delHandler} doneHandler={doneHandler}/>
             </table>
         </div>
 
