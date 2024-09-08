@@ -3,7 +3,7 @@
 import React from 'react'
 import ListItem from "./ListItem";
 
-function List({doneHandler,delHandler}) {
+function List({ doneHandler, delHandler, todos }) {
 
     return (
         <div className='py-5 '>
@@ -12,7 +12,12 @@ function List({doneHandler,delHandler}) {
                     <th className='w-10/12 border border-orange-400'>To Do</th>
                     <th className='w-2/12'>OP</th>
                 </tr>
-                <ListItem title='Go to the Gym at 21:00' delHandler={delHandler} doneHandler={doneHandler}/>
+                {
+                    todos && todos.map((todo) => {
+                       return <ListItem key={todo.id} id={todo.id} title={todo.title} delHandler={delHandler} doneHandler={doneHandler} />
+                    })
+                }
+
             </table>
         </div>
 
