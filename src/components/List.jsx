@@ -14,7 +14,7 @@ function List({ doneHandler, delHandler, todos }) {
                 </tr>
                 {
                     todos && todos.map((todo) => {
-                       return <ListItem key={todo.id} id={todo.id} title={todo.title} delHandler={delHandler} doneHandler={doneHandler} />
+                       return <ListItem key={todo.id} id={todo.id} title={todo.title} done={todo.done} delHandler={delHandler} doneHandler={doneHandler} />
                     })
                 }
 

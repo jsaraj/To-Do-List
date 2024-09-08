@@ -13,18 +13,23 @@ function App() {
 
   const inputHandler = (e) => {
     e.preventDefault();
-    setTodo([...todo, { id: Date.now(), title: inputValue }])
+    setTodo([...todo, { id: Date.now(), title: inputValue ,done:false}])
     intervalRef.current.txt1.value = ''
 
   }
 
   const delHandler = (id) => {
-    const newTodo = todo.filter((item) => item.id !== id);
-    setTodo(newTodo)
+    if (window.confirm("Are you sure?")) {
+      const newTodo = todo.filter((item) => item.id !== id);
+      setTodo(newTodo);
+    }
+
   }
 
-  const doneHandler = () => {
-    console.log("Done");
+  const doneHandler = (id) => {
+    const doneTodo=todo.findIndex((item)=>item.id===id);
+    todo[doneTodo].done=!todo[doneTodo].done
+    setTodo([...todo])
   }
 
   return (
